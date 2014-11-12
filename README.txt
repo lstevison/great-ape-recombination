@@ -1,4 +1,4 @@
-The files in this repository are part of the project FIRM GRAPE - Fine-scale recombination maps in Great Apes. 
+The files in this repository are part of the GARMaps project (GAR = Great Ape Recombination). 
 
 Organization:
 Pipeline
