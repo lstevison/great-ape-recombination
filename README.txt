@@ -1,4 +1,4 @@
-The files in this repository are part of the GARMaps project (GAR = Great Ape Recombination). 
+The files in this repository are part of the GARMaps project (GAR = Great Ape Recombination Maps). 
 
 Organization:
 Pipeline
