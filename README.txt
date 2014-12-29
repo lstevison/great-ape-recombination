@@ -61,9 +61,16 @@ The files in this repository are part of the GARMaps project (GAR = Great Ape Re
 
  2B. Multi-syntenic comparison:
 
- 2C. Hotspot analysis: Running MLEHOT stuff can go here.
+ 2C. Cumulative distribution plots:
 
- 2X. PRDM9 Analysis: Stuff running PRDM9 and such can go here.
+ 2D. Hotspot analysis: Running MLEHOT stuff can go here.
 
+ 2E. Hotspot overlap: programs used to get overlap can go here. 
+
+ 2F. PRDM9 Analysis: Stuff running PRDM9 and such can go here.
+
+ 2G. Skew at chromosome ends: Scripts can go here?
 
 3. Links to data in Dryad
+
+ 3A. Recombination map files for bonobo, Nigerian chimpanzee and gorilla. Each genetic map is in one of the main folders and within the folder is a genetic map for each chromosome. See main readme.txt file for information on headers within each subfolder. Also, the species-specific set of hotspots and the hg18 liftOver of these hotspots is in each sub-directory. 3B. Recombination hotspots and matched coldspots for bonobo, western chimpanzee, Nigerian chimpanzee, and gorilla together with number of potential binding sites of each PRDM9 submotif searched. Both average and peak recombination rate as well as %GC and %N are provided for both hotspots and coldspots. Hotspot regions that had multiple matches include the number of matches in a 100kb window.
