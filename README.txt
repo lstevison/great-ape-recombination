@@ -67,7 +67,7 @@ See: multi-synteny pipeline file in lab notebook folder
 
   2Ci. To get a composite of recombination rates at +/- 20kb from all of the sorted hg18 hotspots, we used the program 'hotspot_calc_new.pl' using as input the map files for each population. The output is two columns, the first is the relative distance to the center of the hotspot ranging from -20 to +20. The second column contains the recombination rate from the map that corresponds to that distance. For each set of hotspots, the outputs for all six maps were plotted in R using a loess smoothing with enp.target set to 20 for each dataset to ensure the same scaling for all files. 
 
-  2Cii. To create cumulative distribution of sequence and rate information, we used the program '#~/Gorilla/PanMapData/syntenic_genetic_map/plot_regression.pl' and the corresponding map file for each species. This file also has two columns which start at zero for each and end at roughly 100 for each. The first column represents the cumulative physical distance fraction and the second column represents the commutative recombination rate fraction. It is the second column which is used in R to plot the Gini coefficient and Lorenz curve using the 'ineq' package. 
+  2Cii. To create cumulative distribution of sequence and rate information, we used the program 'plot_regression.pl' and the corresponding map file for each species. This file also has two columns which start at zero for each and end at roughly 100 for each. The first column represents the cumulative physical distance fraction and the second column represents the commutative recombination rate fraction. It is the second column which is used in R to plot the Gini coefficient and Lorenz curve using the 'ineq' package. 
 
  2D. PRDM9 Analysis.
 
