@@ -61,15 +61,21 @@ The files in this repository are part of the GARMaps project (GAR = Great Ape Re
 
  2B. Multi-syntenic comparison:
 
- 2C. Cumulative distribution plots:
+See: multi-synteny pipeline file in lab notebook folder
 
- 2D. Hotspot analysis: Running MLEHOT stuff can go here.
+ 2C. Hotspot Analysis. 
 
- 2E. Hotspot overlap: programs used to get overlap can go here. 
+  2Ci. To get a composite of recombination rates at +/- 20kb from all of the sorted hg18 hotspots, we used the program 'hotspot_calc_new.pl' using as input the map files for each population. The output is two columns, the first is the relative distance to the center of the hotspot ranging from -20 to +20. The second column contains the recombination rate from the map that corresponds to that distance. For each set of hotspots, the outputs for all six maps were plotted in R using a loess smoothing with enp.target set to 20 for each dataset to ensure the same scaling for all files. 
 
- 2F. PRDM9 Analysis: Stuff running PRDM9 and such can go here.
+  2Cii. To create cumulative distribution of sequence and rate information, we used the program '#~/Gorilla/PanMapData/syntenic_genetic_map/plot_regression.pl' and the corresponding map file for each species. This file also has two columns which start at zero for each and end at roughly 100 for each. The first column represents the cumulative physical distance fraction and the second column represents the commutative recombination rate fraction. It is the second column which is used in R to plot the Gini coefficient and Lorenz curve using the 'ineq' package. 
 
- 2G. Skew at chromosome ends: Scripts can go here?
+ 2D. PRDM9 Analysis.
+
+  2Di. First, we generated PWM for each sub motif using zf.princeton.edu (option: polynomial SVM) and the species-specific coordinates for hotspots. Also, we generated a genome-wide file with recombination rate and GC content for every 1kb region in the genome. To do this, we first got the coordinates for the syntenic blocks for the whole genomes of each map to ensure the regions we generated would have recombination information. We then used 'make_bins.pl' to split this BED file so that it would have an individual entry for each 1kb region within each set of coordinates. Next, we used the unix command 'split' to the expanded BED file into separate files each containing only 5000 lines. We then used 'rate_at_hotspots.pl' to run a parallel jobs based on each split file to get average and peak recombination rate information from the genetic maps file for each 1kb region. We also used the program 'extractseq.pl' to simultaneously extract the FASTA sequence for each region using the unmasked version of each genome file and calculate the GC content for each region. We then wrote these individual rate and GC outputs to a main output file for each genome. 
+
+  2Dii. Next, we did a count of potential binding sites for each PRDM9 sub-motif in both hotspot regions and cold spot regions. To get matched cold spots, we sorted the set of hotspots using 'sort_by_chr.sh' from the repository 'random-scripts' using species-specific chromosome lists for each map. Then, we used the program 'rate_at_hotspots.pl' to calculate average and peak rate for each hotspot region based on the genetic map files. Next, we used 'extractseq.pl' to extract FASTA sequence from the unmasked genome file for all hotspots. We then used the program 'match_cold_spots_final.pl' to read in the FASTA of hotspots, the hotspot file with rates, the genome file and output matched regions based on an average and peak rate cutoff and a distance metric. Once we had a set of matched hotspot and coldspot regions, we generated corresponding bed files for the coordinates for each and used 'extractseq.pl' to extract the FASTA sequence for each region from the masked genome files. We then ran the program 'fimo' on both the hotspot and coldspot sequences based on the relevant PRDM9 sub-motifs (option: --parse-genomic-coord). We then combined the fimo outputs for hotspot and coldspot regions back into the original matched set file to include a count of significant fimo hits using the program 'panmap_motif_cleanup.pl'.
+
+  2Diii. Third, we performed a genome-wide search for PRDM9 binding, regardless of hotspot locations. This also relied on the genome file of 1kb regions. For the purposes of running fimo on each region, we split the genome file into smaller files using the unix command 'split' that were each 10k lines. We then ran fimo on each subset of 10k lines in parallel. First, we extracted the FASTA sequence of each 1kb region using the masked version of the genome files with the program 'extractseq.pl'. We then ran the program 'fimo' on each 1kb region based on the relevant PRDM9 sub-motifs (option: --parse-genomic-coord). Finally, we combined the fimo outputs for each individual fimo run using the unix command 'cat' . We then summarized the individual fimo outputs for each sub-motif using the original genome file and the program 'chr_motif_cleanup.pl'. 
 
 3. Links to data in Dryad
 
