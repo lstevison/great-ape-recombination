@@ -9,7 +9,7 @@ The files in this repository are part of the GARMaps project (GAR = Great Ape Re
   1Aii. All other initial filtering was done using VCFtools. Options used include: --mac 1 --max-missing-count --hwe 0.001  
 
 
- 1B. Reciprocal leftover.
+ 1B. Reciprocal liftover.
 
   1Bi. Thinned VCF was converted to extended BED file for input into liftOver keeping original coordinates for later comparison. Each site was reciprocally lifted-over using the UCSC tool liftOver (options: minMatch=0.1; -bedPlus=3). 
 
