@@ -57,9 +57,14 @@ The files in this repository are part of the GARMaps project (GAR = Great Ape Re
 
 2. Analysis
 
- 2A. Get published maps:
+ 2A. Get published maps.
 
- 2B. Multi-syntenic comparison:
+  2Ai. PanMap. Once we downloaded the file: 'lifted_maps_min_chunk_5000_SNPs_50kb_gaps_10CEU_10YRI_with_chimp_super_clean_genotype_map_and_HapMap_Pops.txt' from the PanMap website, we used the program 'split_maps.pl' to split the file based on the corresponding columns for into each sub map and converted recombination rate to rho/kb . This program also worked to get published maps in a similar format to our files which include both start and stop coordinate for each recombination interval to account for the breaks in the map due to synteny blocks. 
+
+  2Aii. Human. See Nov 11th entries.
+
+
+ 2B. Multi-syntenic comparison.
 
 See: multi-synteny pipeline file in lab notebook folder
 
