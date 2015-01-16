@@ -1,4 +1,4 @@
-The files in this repository are part of the GARMaps project (GAR = Great Ape Recombination Maps). 
+The files in this repository are part of the GARMaps project (GAR = Great Ape Recombination Maps). To cite this repository, use: http://dx.doi.org/10.5281/zenodo.13975
 
 1. Rate estimation Pipeline
 
