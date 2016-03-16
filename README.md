@@ -100,6 +100,10 @@ awk 'NR>1 && OFS="\t" {if(v)print "chr1",int(v),int($1),int((v+$1)/2),rate,map,(
 
 ###3. Folders with final map data
 
-  3A. Recombination map files for bonobo, Nigerian chimpanzee and gorilla. Each genetic map is in one of the main folders and within the folder is a genetic map for each chromosome. See main readme.txt file for information on headers within each subfolder. _Coming soon, we will post the species-specific set of hotspots and the hg18 liftOver of these hotspots in each sub-directory._
+####3A. Recombination map files for bonobo, Nigerian chimpanzee and gorilla. 
 
-  3B. **Coming soon:** Recombination hotspots and matched coldspots for bonobo, western chimpanzee, Nigerian chimpanzee, and gorilla together with number of potential binding sites of each PRDM9 submotif searched. Both average and peak recombination rate as well as %GC and %N are provided for both hotspots and coldspots. Hotspot regions that had multiple matches include the number of matches in a 100kb window.
+Each genetic map is in one of the main folders and within the folder is a genetic map for each chromosome. See main readme.txt file for information on headers within each subfolder. _Coming soon, we will post the species-specific set of hotspots and the hg18 liftOver of these hotspots in each sub-directory._
+
+####3B. **Coming soon:** Recombination hotspots and matched coldspot files. 
+
+Recombination hotspots and matched coldspot for bonobo, western chimpanzee, Nigerian chimpanzee, and gorilla together with number of potential binding sites of each PRDM9 submotif searched. Both average and peak recombination rate as well as %GC and %N are provided for both hotspots and coldspots. Hotspot regions that had multiple matches include the number of matches in a 100kb window.
