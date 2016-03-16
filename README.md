@@ -1,3 +1,5 @@
+#Great Ape Recombination (GAR) Maps 
+
 The files in this repository are part of the GARMaps project (GAR = Great Ape Recombination Maps). To cite this repository, use: http://dx.doi.org/10.5281/zenodo.13975
 
 1. Rate estimation Pipeline
@@ -22,8 +24,9 @@ The files in this repository are part of the GARMaps project (GAR = Great Ape Re
   1Ci. First filtered sites from hg18 mapping were recorded using VCFtools (option: --filtered-sites). Then, the corresponding hg18 coordinates were extracted from non-human primate VCF from the info field using VCFtools (option: --get-INFO 'hg18'). This output was then converted to a format to similar to the '.kept.sites' output from VCFtools using the script 'INFOtokept.sites.pl'. 
 
   1Cii. Intersection was done using awk:
-
+````Shell
 	$ awk 'NR==FNR{a[$0]=$0;next}a[$0]' converted-info-field-output filtered-sites-output-fromhg18 >OUTPUT
+````
 
   1Ciii. Converted coordinates back: Using script 'new_Intersection.pl', the hg18 coordinates pulled from the non-human primate VCF were used to convert the intersected hg18 coordinates back to the non-human primate coordinates to reduce each corresponding VCF file using VCFtools (options: --positions --filtered-sites).
 
@@ -83,9 +86,9 @@ The files in this repository are part of the GARMaps project (GAR = Great Ape Re
 
   2Diii. Third, we performed a genome-wide search for PRDM9 binding, regardless of hotspot locations. This also relied on the genome file of 1kb regions. For the purposes of running fimo on each region, we split the genome file into smaller files using the unix command 'split' that were each 10k lines. We then ran fimo on each subset of 10k lines in parallel. First, we extracted the FASTA sequence of each 1kb region using the masked version of the genome files with the program 'extractseq.pl'. We then ran the program 'fimo' on each 1kb region based on the relevant PRDM9 sub-motifs (option: --parse-genomic-coord). Finally, we combined the fimo outputs for each individual fimo run using the unix command 'cat' . We then summarized the individual fimo outputs for each sub-motif using the original genome file and the program 'chr_motif_cleanup.pl'. 
 
-3. Links to data in Dryad
+3. Folders with final map data
 
- 3A. Recombination map files for bonobo, Nigerian chimpanzee and gorilla. Each genetic map is in one of the main folders and within the folder is a genetic map for each chromosome. See main readme.txt file for information on headers within each subfolder. Also, the species-specific set of hotspots and the hg18 liftOver of these hotspots is in each sub-directory.
+ 3A. Recombination map files for bonobo, Nigerian chimpanzee and gorilla. Each genetic map is in one of the main folders and within the folder is a genetic map for each chromosome. See main readme.txt file for information on headers within each subfolder. Coming soon, we will post the species-specific set of hotspots and the hg18 liftOver of these hotspots in each sub-directory.
 
  3B. Recombination hotspots and matched coldspots for bonobo, western chimpanzee, Nigerian chimpanzee, and gorilla together with number of potential binding sites of each PRDM9 submotif searched. Both average and peak recombination rate as well as %GC and %N are provided for both hotspots and coldspots. Hotspot regions that had multiple matches include the number of matches in a 100kb window.
 
