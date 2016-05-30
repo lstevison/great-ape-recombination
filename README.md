@@ -106,4 +106,4 @@ Each genetic map is in one of the main folders and within the folder is a geneti
 
 ####3B. Raw recombination hotspots, and hotspots with matched coldspot files. 
 
-In main directory, hotspots identified were lifted over to hg18 using liftover and sorted. In sub-directory, recombination hotspots and matched coldspot for bonobo, western chimpanzee, Nigerian chimpanzee, and gorilla together with number of potential binding sites of each PRDM9 submotif searched. Both average and peak recombination rate as well as %GC and %N are provided for both hotspots and coldspots. Hotspot regions that had multiple matches include the number of matches in a 100kb window.
+In main directory, hotspots identified were lifted over to hg18 using liftover and sorted. In sub-directory, recombination hotspots and matched coldspot for bonobo, western chimpanzee, Nigerian chimpanzee, and gorilla together with number of potential binding sites of each PRDM9 submotif searched. Both average and peak recombination rate as well as %GC and %N are provided for both hotspots and coldspots.
