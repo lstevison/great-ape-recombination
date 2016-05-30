@@ -1,4 +1,4 @@
-Hot_chr	Hot_start	Hot_end	Hot_GC	Min_rec	Mean_rec	Max_rec	hot_count_Western	hot_count_A1	hot_count_E1	hot_count_Pt1	hot_count_total	Cold_chr	Cold_start	Cold_end	Cold_GC	Min_rec	Mean_rec	Max_rec	cold_count_Western	cold_count_A1	cold_count_E1	cold_count_Pt1	cold_count_total
+Hot_chr	Hot_start	Hot_end	Hot_GC	%N	Mean_rec	Peak_rec	hot_count_Western	hot_count_A1	hot_count_E1	hot_count_Pt1	hot_count_total	Cold_chr	Cold_start	Cold_end	Cold_GC	%N	Mean_rec	Peak_rec	cold_count_Western	cold_count_A1	cold_count_E1	cold_count_Pt1	cold_count_total
 chr1	5605000	5607000	46.88	0.00	3.15940635956909	3.19047967479675	1	2	0	0	3	chr1	5608001	5610000	46.85	0	0.00160525888672783	0.00163145258105041	0	0	0	0	0
 chr1	5616000	5619000	51.98	8.33	3.8827456842277	7.50976510067114	0	1	0	0	1	chr1	5668001	5671000	51.7666666666667	0	0.487422474593238	0.487850150348255	1	0	0	0	1
 chr1	5657000	5659000	44.88	0.00	5.58498365431547	6.86617777777769	0	1	0	1	2	chr1	5576001	5578000	44.95	0	0.385980033561462	1.11769987995198	2	0	0	0	2

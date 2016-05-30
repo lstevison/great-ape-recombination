@@ -1,4 +1,4 @@
-Hot_chr	Hot_start	Hot_end	Hot_GC	Min_rec	Mean_rec	Max_rec	hot_count1	hot_count2	hot_count_gg-2	hot_count4	hot_count5	hot_count_gg-1	hot_count_total	Cold_chr	Cold_start	Cold_end	Cold_GC	Min_rec	Mean_rec	Max_rec	cold_count1	cold_count2	cold_count_gg-2	cold_count4	cold_count5	cold_count_gg-1	cold_count_total
+Hot_chr	Hot_start	Hot_end	Hot_GC	%N	Mean_rec	Peak_rec	hot_count1	hot_count2	hot_count_gg-2	hot_count4	hot_count5	hot_count_gg-1	hot_count_total	Cold_chr	Cold_start	Cold_end	Cold_GC	%N	Mean_rec	Peak_rec	cold_count1	cold_count2	cold_count_gg-2	cold_count4	cold_count5	cold_count_gg-1	cold_count_total
 chr1	1896000	1899000	61.29	0.07	5.3945503520352	6.93969	1	1	0	0	5	7	chr1	1958001	1961000	61.3333333333333	13.9666666666667	0.645066891577967	0.675073333333333	2	2	0	0	0	4
 chr1	2065000	2069000	55.31	1.07	6.97299290010887	19.83294	0	2	2	0	1	5	chr1	2086001	2090000	56.1825	5.45	0.700442089422618	0.804095	2	2	1	0	1	6
 chr1	2295000	2297000	48.63	0.00	5.78365665915352	26.13624	0	1	0	0	0	1	chr1	2349001	2351000	46.8	0	0.031923344994425	0.0325	0	0	0	0	0	0
